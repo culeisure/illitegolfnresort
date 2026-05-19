@@ -92,5 +92,6 @@ https://bit.ly/egnr-guide
   (초기 딥그린+골드 안은 브랜드 불일치로 폐기 — 되돌리지 말 것)
 - 폰트 Pretendard. 모션: 인트로 로고(세션 1회)·켄번즈·스크롤 리빌·진행바·카운트업.
   전부 `prefers-reduced-motion` 존중.
-- `img/` 안 미사용 사진(aerial·resort·hero.jpg(옛 노을)·course-02·lobby-eve)은
+- `img/dusk.jpg`(노을 야경)는 "골프·호텔·휴식…" 배너 배경.
+- `img/` 안 미사용 사진(aerial·resort·course-02·lobby-eve)은
   히어로/갤러리 교체용 백업.
