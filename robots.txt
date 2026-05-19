@@ -1,0 +1,11 @@
+# 이 사이트는 검색엔진에 노출하지 않습니다.
+User-agent: *
+Disallow: /
+
+# 네이버
+User-agent: Yeti
+Disallow: /
+
+# 구글
+User-agent: Googlebot
+Disallow: /
