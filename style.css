@@ -208,16 +208,17 @@ a { color: inherit; text-decoration: none; }
   flex: 0 0 auto;
 }
 .lock__meta-date {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .02em;
-  color: rgba(255, 255, 255, .92);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -.005em;
+  color: #fff;
+  line-height: 1.4;
 }
 
 .lock__dday {
-  margin-top: 14px;
+  margin-top: 10px;
   padding-left: 46px;
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: .02em;
   line-height: 1;
@@ -350,6 +351,13 @@ a { color: inherit; text-decoration: none; }
 .rows__v strong {
   font-weight: 800;
   color: var(--slate);
+}
+.rows__note {
+  display: block;
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: -.005em;
 }
 
 
