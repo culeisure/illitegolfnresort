@@ -12,6 +12,7 @@
 
   <title>고객 전용 안내</title>
   <meta name="description" content="자주 찾아주시는 고객님을 위한 전용 안내 페이지입니다." />
+  <meta name="theme-color" content="#1c2123" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://culeisure.github.io/illitegolfnresort/" />
   <meta property="og:title" content="고객 전용 안내" />
@@ -26,7 +27,6 @@
   <meta name="twitter:image" content="https://culeisure.github.io/illitegolfnresort/img/og.png" />
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-  <link rel="preload" as="image" href="img/hero.webp" />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
@@ -42,121 +42,108 @@
 
   <div class="shell">
 
-    <!-- ===== 헤더 ===== -->
-    <header class="head" id="head">
-      <img class="head__logo" src="img/logo.png" alt="ILLITE COUNTRY CLUB" />
-      <a class="head__tel" href="tel:0424711119"
-         data-track="cta_call" data-track-pos="header">예약문의 042-471-1119</a>
-    </header>
-
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-      <div class="hero__media" id="heroMedia"></div>
-      <div class="hero__veil" aria-hidden="true"></div>
-      <div class="hero__body">
-        <span class="hero__eyebrow"><i aria-hidden="true"></i>고객 전용 안내</span>
-        <h1 class="hero__title">
-          자주 찾아주신 고객님께<br />
-          <em>레인보우멤버십</em>을<br />안내드립니다
+    <!-- ===== 잠금 화면: 풀스크린 다크 절제 안내 ===== -->
+    <section class="lock" id="lock" aria-label="회원 전용 안내">
+      <div class="lock__bg" aria-hidden="true"></div>
+      <div class="lock__veil" aria-hidden="true"></div>
+      <div class="lock__top">
+        <img class="lock__brand" src="img/logo.png" alt="ILLITE COUNTRY CLUB" />
+      </div>
+      <div class="lock__body">
+        <span class="lock__eyebrow">
+          <i aria-hidden="true"></i>
+          <span>회원 전용 안내</span>
+        </span>
+        <h1 class="lock__title">
+          <span class="lock__line">일라이트CC를<br />찾아주시는 고객님께</span>
+          <span class="lock__line"><em>레인보우멤버십</em></span>
+          <span class="lock__line">창립 혜택 마감을</span>
+          <span class="lock__line">안내드립니다</span>
         </h1>
-        <span class="hero__rule" aria-hidden="true"></span>
-        <p class="hero__sub">
-          라운드 · 동반자 · 호텔 이용 혜택을 함께 누리는<br />
-          소수 한정 멤버십입니다.
+        <div class="lock__meta js-deadline-block">
+          <span class="lock__meta-line" aria-hidden="true"></span>
+          <p class="lock__meta-date">마감 · 2026년 6월 30일</p>
+        </div>
+        <p class="lock__dday js-deadline-block">
+          <span class="js-dday">D-5</span>
         </p>
       </div>
-      <span class="hero__scroll" aria-hidden="true"></span>
+      <div class="lock__hint" aria-hidden="true">
+        <span class="lock__hint-line"></span>
+        아래로 안내
+      </div>
     </section>
 
+    <!-- ===== 헤더 (lock 이후 sticky로 등장) ===== -->
+    <header class="head" id="head">
+      <div class="head__bar">
+        <img class="head__logo" src="img/logo.png" alt="ILLITE COUNTRY CLUB" />
+        <a class="head__tel" href="tel:0424711119"
+           data-track="cta_call" data-track-pos="header">예약문의 042-471-1119</a>
+      </div>
+    </header>
+
     <main>
-      <!-- ===== 인트로 카피 ===== -->
+      <!-- ===== 인사 · 안내 ===== -->
       <section class="block block--intro reveal">
-        <p class="lead">
-          일라이트CC를 자주 이용해 주신 고객님께만
-          우선 안내드리는 <strong>한정 구좌 멤버십</strong>입니다.
-          라운드부터 동반자 혜택, 일라이트호텔 숙박까지
-          하나의 멤버십으로 누리실 수 있습니다.
+        <p class="lede">
+          일라이트CC를 찾아주시는 고객님께,<br />
+          그동안의 성원에 감사드립니다.
+        </p>
+        <p class="lede__sub">
+          창립 한정 구좌로 안내드려 온 <strong>레인보우멤버십</strong>이
+          <strong>6월 30일</strong> 마감을 앞두고 있습니다.
+        </p>
+        <p class="lede__sub">
+          현 창립 혜택은 가장 우대된 가입 조건이며,
+          <strong>6월 30일까지</strong> 상담을 신청하신 분들에 한해
+          동일하게 적용될 수 있도록 도움드리겠습니다.
+        </p>
+        <p class="lede__sub">
+          마감 이후로는 <strong>8월 1일 1차 회원 모집</strong>으로 새롭게 찾아뵙겠으며,
+          창립 혜택 안내는 이번이 마지막이오니
+          상담 원하시는 분께서는 마감 전 편히 문의해 주십시오.
         </p>
       </section>
 
-      <!-- ===== 핵심 혜택 ===== -->
+      <!-- ===== 멤버십 혜택 — 인라인 리스트 ===== -->
       <section class="block reveal" aria-labelledby="benefits-title">
-        <h2 class="block__title" id="benefits-title">핵심 혜택</h2>
-
-        <ul class="cards">
-          <li class="card">
-            <p class="card__label">가입금액</p>
-            <p class="card__value">1<small>억원</small></p>
-            <p class="card__desc">한정 구좌</p>
+        <h2 class="block__title" id="benefits-title">멤버십 혜택</h2>
+        <ul class="rows">
+          <li>
+            <span class="rows__k">가입</span>
+            <span class="rows__v"><strong>1억원</strong> · 한정 구좌</span>
           </li>
-          <li class="card">
-            <p class="card__label">월 이용</p>
-            <p class="card__value">
-              월 <span class="count" data-target="6">6</span>회
-            </p>
-            <p class="card__desc">일라이트CC 라운드</p>
+          <li>
+            <span class="rows__k">라운드</span>
+            <span class="rows__v">월 <strong>6회</strong> · 주말 월 <strong>2회</strong></span>
           </li>
-          <li class="card">
-            <p class="card__label">주말 혜택</p>
-            <p class="card__value">
-              주말 <span class="count" data-target="2">2</span>회
-            </p>
-            <p class="card__desc">월 한정 이용 가능</p>
+          <li>
+            <span class="rows__k">호텔</span>
+            <span class="rows__v">연 <strong>30박</strong> · 멤버십 요금 적용</span>
           </li>
-          <li class="card">
-            <p class="card__label">회원 구성</p>
-            <p class="card__value card__value--sm">기명 2 + 동반 3</p>
-            <p class="card__desc">또는 무기명 4인</p>
+          <li>
+            <span class="rows__k">회원 구성</span>
+            <span class="rows__v">기명 2 + 동반 3 · 또는 무기명 4인</span>
           </li>
-
-          <li class="card card--feature">
-            <div class="card__photo" style="background-image:url('img/amenity.jpg')"></div>
-            <div class="card__feat">
-              <p class="card__label">호텔 혜택</p>
-              <p class="card__value">
-                연 <span class="count" data-target="30">30</span>박
-              </p>
-              <p class="card__desc">일라이트호텔 멤버십 요금 적용</p>
-            </div>
+          <li>
+            <span class="rows__k">부대시설</span>
+            <span class="rows__v">멤버십 요금 적용</span>
           </li>
         </ul>
       </section>
 
-      <!-- ===== 시설 갤러리 ===== -->
-      <section class="gallery reveal" aria-label="일라이트 시설">
-        <figure class="shot shot--tall">
-          <img src="img/lobby.webp" alt="일라이트호텔 로비" loading="lazy" decoding="async" />
-          <figcaption>LOBBY · 일라이트호텔</figcaption>
-        </figure>
-        <div class="gallery__row">
-          <figure class="shot">
-            <img src="img/reception.jpg" alt="프런트 데스크" loading="lazy" decoding="async" />
-            <figcaption>FRONT DESK</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="img/amenity.jpg" alt="파우더룸" loading="lazy" decoding="async" />
-            <figcaption>POWDER ROOM</figcaption>
-          </figure>
+      <!-- ===== 단일 풀폭 코스 ===== -->
+      <section class="full reveal" aria-label="일라이트CC 코스">
+        <img src="img/course-01.jpg" alt="일라이트CC 코스" loading="lazy" decoding="async" />
+        <div class="full__cap">
+          <p>라운드의 시간,<br />일라이트의 풍경</p>
         </div>
-        <figure class="shot shot--tall">
-          <img src="img/course-01.jpg" alt="일라이트CC 코스" loading="lazy" decoding="async" />
-          <figcaption>COURSE · 일라이트CC</figcaption>
-        </figure>
       </section>
 
-      <!-- ===== 상세 혜택 ===== -->
-      <section class="block block--paper reveal" aria-labelledby="details-title">
-        <h2 class="block__title" id="details-title">상세 혜택</h2>
-
-        <ul class="ticks">
-          <li>일라이트CC 월 6회 이용</li>
-          <li>주말 월 2회 한정 이용 가능</li>
-          <li>동반자 / 무기명 4인 1팀 혜택 적용</li>
-          <li>일라이트호텔 연 30박 멤버십 요금 적용</li>
-          <li>일라이트호텔 부대시설 멤버십 요금 적용</li>
-        </ul>
-
-        <p class="mini-title">그린피 안내</p>
+      <!-- ===== 그린피 · 부대시설 ===== -->
+      <section class="block reveal" aria-labelledby="fee-title">
+        <h2 class="block__title" id="fee-title">그린피 안내</h2>
         <table class="fee">
           <thead>
             <tr><th>구분</th><th>주중</th><th>주말</th></tr>
@@ -167,36 +154,37 @@
           </tbody>
         </table>
 
-        <div class="amenity">
-          <p class="mini-title">부대시설</p>
-          <div class="chips">
-            <span class="chip">수영장</span>
-            <span class="chip">세미나실</span>
-            <span class="chip">야외가든</span>
-          </div>
+        <p class="mini-title">부대시설</p>
+        <div class="chips">
+          <span class="chip">수영장</span>
+          <span class="chip">세미나실</span>
+          <span class="chip">야외가든</span>
         </div>
       </section>
 
-      <!-- ===== 호텔 비주얼 ===== -->
-      <section class="banner reveal" aria-label="일라이트호텔 전경">
-        <img src="img/dusk.jpg" alt="일라이트 리조트 야경" loading="lazy" decoding="async" />
-        <div class="banner__cap">
-          <p>골프 · 호텔 · 휴식이 한 곳에서 이어집니다</p>
-        </div>
-      </section>
+      <!-- ===== 마감 강조 + CTA ===== -->
+      <section class="block block--cta reveal">
 
-      <!-- ===== 상담 CTA ===== -->
-      <section class="block block--cta reveal" aria-labelledby="cta-title">
-        <h2 class="block__title" id="cta-title">상담 가능 여부 확인하기</h2>
+        <div class="endcard js-deadline-block">
+          <p class="endcard__label">창립 혜택 마감 안내</p>
+          <p class="endcard__date">2026년 6월 30일</p>
+          <p class="endcard__sub">
+            한정 구좌가 소진되는 경우<br />
+            안내가 조기 종료될 수 있습니다.
+          </p>
+        </div>
+
         <p class="cta-desc">
-          한정 구좌로 운영되는 멤버십입니다.<br />
-          전화 또는 문자로 편하게 문의해 주세요.
+          상담을 원하시는 분께서는<br />
+          마감 전 편히 문의해 주십시오.
         </p>
         <div class="cta-btns">
-          <a class="btn btn--solid" href="tel:0424711119"
-             data-track="cta_call" data-track-pos="section">전화 상담하기</a>
-          <a class="btn btn--line"
-             href="sms:01040873443?body=레인보우멤버십 상담 요청드립니다."
+          <a class="btn btn--lime" href="tel:0424711119"
+             data-track="cta_call" data-track-pos="section">
+            전화 상담하기 · 042-471-1119
+          </a>
+          <a class="btn btn--ghost"
+             href="sms:01040873443?body=창립 혜택 마감 전 레인보우멤버십 상담 요청드립니다."
              data-track="cta_sms" data-track-pos="section">문자 상담 요청하기</a>
         </div>
       </section>
@@ -205,6 +193,7 @@
       <footer class="foot">
         <img class="foot__logo" src="img/logo.png" alt="ILLITE COUNTRY CLUB" />
         <p class="foot__line">문의 <a href="tel:0424711119">042-471-1119</a></p>
+        <p class="foot__line foot__line--mut js-deadline-block">창립 혜택 마감 6월 30일</p>
         <p class="foot__line foot__line--mut">무료수신거부 080-877-5688</p>
         <p class="foot__fine">
           본 안내는 일라이트CC를 이용해 주신 고객님께 제공되는 전용 안내입니다.
@@ -219,7 +208,7 @@
         <span aria-hidden="true">&#9742;</span> 전화 상담
       </a>
       <a class="bar__btn bar__btn--sms"
-         href="sms:01040873443?body=레인보우멤버십 상담 요청드립니다."
+         href="sms:01040873443?body=창립 혜택 마감 전 레인보우멤버십 상담 요청드립니다."
          data-track="cta_sms" data-track-pos="sticky">
         <span aria-hidden="true">&#9993;</span> 문자 상담
       </a>

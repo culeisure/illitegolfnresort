@@ -130,7 +130,41 @@
     });
   })();
 
-  /* ---------- 5) 전환 트래킹 ----------
+  /* ---------- 5) 마감 D-day 자동 계산 ----------
+     마감일 변경 시 아래 세 상수만 수정.
+     마감일 지나면 .js-deadline-block 전부 자동 숨김. */
+  (function () {
+    var DL_Y = 2026, DL_M = 5 /* 0-index: 5 = 6월 */, DL_D = 30;
+
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var dl = new Date(DL_Y, DL_M, DL_D);
+    dl.setHours(0, 0, 0, 0);
+
+    var days = Math.round((dl.getTime() - today.getTime()) / 86400000);
+
+    if (days < 0) {
+      // 마감 종료: 띠 / 박스 / 문구 전부 숨김
+      var blocks = document.querySelectorAll(".js-deadline-block");
+      for (var i = 0; i < blocks.length; i++) {
+        blocks[i].style.display = "none";
+      }
+      // hero 등 마감 후 대체 카피 자동 교체
+      var fallbacks = document.querySelectorAll("[data-after-deadline-html]");
+      for (var k = 0; k < fallbacks.length; k++) {
+        fallbacks[k].innerHTML = fallbacks[k].getAttribute("data-after-deadline-html");
+      }
+      return;
+    }
+
+    var label = days === 0 ? "D-DAY" : "D-" + days;
+    var ddays = document.querySelectorAll(".js-dday");
+    for (var j = 0; j < ddays.length; j++) {
+      ddays[j].textContent = label;
+    }
+  })();
+
+  /* ---------- 6) 전환 트래킹 ----------
      전송 대상이 붙기 전까지 dataLayer 큐 + 콘솔.
      GA4 연결 시 gtag 줄 주석만 해제. */
   (function () {
